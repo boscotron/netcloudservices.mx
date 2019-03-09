@@ -1,5 +1,5 @@
 <?php
-$n=null;$s=$jmyWeb->sesion();$s=$s['permiso'];if($s>3){$jmyWeb ->pre(['p'=>['Tu usuario no es válido'],'t'=>'ERROR']);}
+$n=null;$s=$jmyWeb->sesion();$s=$s['permiso'];if($s<3){$jmyWeb ->pre(['p'=>['Tu usuario no es válido'],'t'=>'ERROR']);}
 
 $cu=($s>3)?new mysqli(DB_HO,DB_US,DB_PA,DB_DB):$n;
 if($cu->connect_error){$error[]='Error de Conexión ('.$mysqli->connect_errno.')'.$mysqli->error;}else{
