@@ -8,7 +8,6 @@
 				<div id="footer-bottom">
 					<div class="container clearfix">
 				<ul class="et-social-icons">
-
 	<li class="et-social-icon et-social-facebook">
 		<a href="./#" class="icon">
 			<span>Facebook</span>
@@ -29,8 +28,30 @@
 			<span>RSS</span>
 		</a>
 	</li>
+	<br>
+	<li  class="et-logo-icon et-logo">
+				<img  src="<?php $this->url_templet(); ?>/assets/img/logo.png" alt="NETCLOUD" id="logo" width="70%" data-height-percentage="89" data-actual-width="221" data-actual-height="104">
+	</li>
 
-</ul><div id="footer-info">Netcloud todos los derechos reservados</div>					</div>	<!-- .container -->
+
+</ul>
+
+<ul>
+<div class="col-md-2 col-sm-4">
+                    <h3 class="jmy_web_div" data-page="footer" id="texto_conocenos" data-editor="no">
+                        <?php $this->pnt('texto_conocenos','Conocenos ',["secundario"=>"footer"]); ?>
+                            </h3>
+                    <ul>
+                        <li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#" class="jmy_web_div" data-page="footer" id="texto_nosotros" data-editor="no">
+                        <?php $this->pnt('texto_nosotros','Nosotros ',["secundario"=>"footer"]); ?></a></li>
+                        <li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#" class="jmy_web_div" data-page="footer" id="texto_Habitaciones" data-editor="no">
+                        <?php $this->pnt('texto_Habitaciones','Habitaciones ',["secundario"=>"footer"]); ?></a></li>
+                        <li><a href="<?php echo RUTA_ACTUAL; ?>contacto" class="jmy_web_div" data-page="footer" id="texto_Contacto" data-editor="no">
+                        <?php $this->pnt('texto_Contacto','Contacto ',["secundario"=>"footer"]); ?></a></li>
+                    </ul>
+                </div> 
+</ul>
+<div id="footer-info">Netcloud todos los derechos reservados</div>					</div>	<!-- .container -->
 				</div>
 			</footer> <!-- #main-footer -->
 		</div> <!-- #et-main-area -->
