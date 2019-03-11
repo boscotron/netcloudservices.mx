@@ -1,4 +1,7 @@
-<?php $page = "inicio"; ?>
+<?php
+ $page = "inicio";
+ $tabla = "landing"; ?>
+
 <article id="post-7" class="post-7 page type-page status-publish hentry">
    <div class="entry-content">
       <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider">
@@ -149,16 +152,16 @@
 
       </div>
       <!-- .et_pb_section -->
-      <div id="contacto" class="et_pb_section et_pb_section_4 et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider jmy_web_slider" data-marco="img_slider0" 
-        
-        <?php  $va=[];           $va[] =["type"=>"imagen",
-                                   "id"=>"img_slider_2",
-                                     "width"=>"1600",
-                                     "height"=>"942",
-                                     "url"=>$this->url_templet(["return"=>true]).'images/contacto2.jpg' ];?>  data-var='<?php echo json_encode($va); ?>'>
+      <div id="contacto" class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('img_slider_2',$this->url_templet(["return"=>1]).'images/contacto2.jpg'); ?>') !important">
 
-        <div id="img_slider_2" class="parlx" 
-        style="background: url(<?php $this->pnt('img_slider_2',$this->url_templet(['return'=>true]).'images/resource/sld1.jpg'); ?>);"></div>
+<div class="jmy_web_slider"  data-page="<?php echo $page; ?>"   data-tabla="<?php echo $tabla; ?>"  id="marco_contacto"  data-marco="marco_contacto" data-var='<?php echo json_encode([ [ 
+		"type"=>"imagen",
+		"id"=>"img_slider_2",
+		"backgound"=>"et_pb_section_4",
+		"width"=>"1920",
+		"height"=>"1304",
+     ]]); ?>'></div>
+
          <div class="et_pb_top_inside_divider"></div>
          <div class=" et_pb_row et_pb_row_6 et_pb_gutters2">
             <div class="et_pb_column et_pb_column_1_2  et_pb_column_14 et_pb_column_empty et_pb_css_mix_blend_mode_passthrough">
