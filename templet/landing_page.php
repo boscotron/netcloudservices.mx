@@ -289,11 +289,11 @@
 
 				   <div class="et_pb_text_inner">
 
-					  <h2 class="jmy_web_div" data-page="'.$page.'" id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
+					  <h2 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
 
-					  <h4 class="jmy_web_div" data-page="'.$page.'" id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
+					  <h4 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
 
-					   <p class="jmy_web_div" data-page="'.$page.'" id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
+					   <p class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
 
 				   </div>
 
