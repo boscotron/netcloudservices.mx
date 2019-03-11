@@ -11,9 +11,15 @@
 <article id="post-7" class="post-7 page type-page status-publish hentry">
 
    <div class="entry-content">
-
-      <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider">
-
+		
+      <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('foto',$this->url_templet(["return"=>1]).'assets/img/banner.jpg'); ?>') !important">
+<div class="jmy_web_slider"  data-page="<?php echo $page; ?>"   data-tabla="<?php echo $tabla; ?>"  id="marco_principal"  data-marco="marco_principal" data-var='<?php echo json_encode([ [ 
+		"type"=>"imagen",
+		"id"=>"foto",
+		"backgound"=>"et_pb_section_0",
+		"width"=>"903",
+		"height"=>"423",
+	  ]]); ?>'></div>
          <div class="et_pb_top_inside_divider"></div>
 
          <div class=" et_pb_row et_pb_row_0">
@@ -266,14 +272,14 @@
 
 				echo (in_array($i,$sa)) ? '</div><div class=" et_pb_row et_pb_row_4">':'';
 
-            
+             
             echo '
             
             
-            <div class="et_pb_column et_pb_column_1_3  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough">
-            <div class="jmy_web_slider"  data-page="'. $page.'"   data-tabla="vistaweb"  id="marco_'.$i.'"  data-marco="marco'.$i.'" data-var=\''.json_encode([ [ "type"=>"imagen",
-               "id"=>"foto",
-               "class"=>"et_pb_column_8",
+            <div class="et_pb_column et_pb_column_1_3  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough" style="background-image:url('.$this->pnt('foto_'.$i,$this->url_templet(["return"=>1]).'/assets/img/comunicaciones.jpg',["return"=>1]).') !important">
+            <div class="jmy_web_slider"  data-page="'. $page.'"   data-tabla="'. $tabla.'"  id="marco_'.$i.'"  data-marco="marco'.$i.'" data-var=\''.json_encode([ [ "type"=>"imagen",
+               "id"=>"foto_".$i,
+               "backgound"=>"et_pb_column_8",
                "idadd"=>"tab_imagenes_",
                 "width"=>"385",
                 "height"=>"252"  ]
@@ -283,11 +289,11 @@
 
 				   <div class="et_pb_text_inner">
 
-					  <h2 class="jmy_web_div" data-page="'.$page.'" id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
+					  <h2 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
 
-					  <h4 class="jmy_web_div" data-page="'.$page.'" id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
+					  <h4 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
 
-					   <p class="jmy_web_div" data-page="'.$page.'" id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
+					   <p class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
 
 				   </div>
 
