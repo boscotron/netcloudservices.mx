@@ -44,11 +44,11 @@ if($jmyWeb->sesion()){
    // $jmyWeb ->pre(['p'=>$session['user']['user_id'],'t'=>'Session']);
     //$jmyWeb ->pre(['p'=>$session['body'],'t'=>'Session']);
 		$jmyWeb->cargar_js(['url'=>'https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js','unico'=>true]);
-        $jmyWeb->cargar_js(['url'=>$jmyWeb->url_templet(['return'=>true]).'assets/js/dashboard-clientes-notas.js?d='.date('U'),'unico'=>true]);
-        $jmyWeb->cargar_js(['url'=>$jmyWeb->url_templet(['return'=>true]).'assets/js/dashboard-clientes-cotizaciones.js?d='.date('U'),'unico'=>true]);
-        $jmyWeb->cargar_js(['url'=>$jmyWeb->url_templet(['return'=>true]).'assets/js/dashboard-clientes-proyectos.js?d='.date('U'),'unico'=>true]);
-        $jmyWeb->cargar_js(['url'=>$jmyWeb->url_templet(['return'=>true]).'assets/js/dashboard-clientes-presentaciones.js?d='.date('U'),'unico'=>true]);
-        $jmyWeb->cargar_js(['url'=>$jmyWeb->url_templet(['return'=>true]).'assets/js/dashboard-clientes.js?d='.date('U'),'unico'=>true]);
+        $jmyWeb->cargar_js(['url'=>$jmyWeb->cdn().'app/jmyweb/v1/assets/js/dashboard-clientes-notas.js?d='.date('U'),'unico'=>true]);
+        $jmyWeb->cargar_js(['url'=>$jmyWeb->cdn().'app/jmyweb/v1/assets/js/dashboard-clientes-cotizaciones.js?d='.date('U'),'unico'=>true]);
+        $jmyWeb->cargar_js(['url'=>$jmyWeb->cdn().'app/jmyweb/v1/assets/js/dashboard-clientes-proyectos.js?d='.date('U'),'unico'=>true]);
+        $jmyWeb->cargar_js(['url'=>$jmyWeb->cdn().'app/jmyweb/v1/assets/js/dashboard-clientes-presentaciones.js?d='.date('U'),'unico'=>true]);
+        $jmyWeb->cargar_js(['url'=>$jmyWeb->cdn().'app/jmyweb/v1/assets/js/dashboard-clientes.js?d='.date('U'),'unico'=>true]);
         $jmyWeb->cargar_css(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"]);    
         $jmyWeb->cargar_js(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"]); 
     if($session['user']['user_id']!=''){

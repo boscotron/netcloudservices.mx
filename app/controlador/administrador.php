@@ -13,7 +13,7 @@ $jmyWeb->cargar_js(["url"=>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/j
 $jmyWeb->cargar_js(["url"=>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"]); 
 $url_entrada = 'https://comsis.mx/app/entrar/?re='.$jmyWeb->url_inicio(['return'=>true]).'administrador/entrar/&api=e2ad454bea7d919f0fc411a8b885580c&api_web='.JMY_API.'&sep=1';
      
-$jmyWeb->cargar_css(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.css"]);    
+$jmyWeb->cargar_css(["url"=>$jmyWeb->cdn()."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.css"]);    
 $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.js"]);  
 if($jmyWeb->sesion()){  
     $data = [];
@@ -45,7 +45,7 @@ if($jmyWeb->sesion()){
              $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.js"]);    
             $jmyWeb->cargar_css(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"]);    
              $jmyWeb->cargar_js(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"]);    
-             $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(["return"=>true])."js/jmy_administrador/administrador_importar.js?f=".$version]);    
+             $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn()."app/jmyweb/v1/assets/js/jmy_administrador/administrador_importar.js?f=".$version]);    
             $s=$jmyWeb->session();
             $t='importar_'.$s['body']['api_web']['ID_F'];
             switch ($peticion[1]) {
@@ -60,13 +60,13 @@ if($jmyWeb->sesion()){
         case 'modulos':      
             $jmyWeb->cargar_css(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"]);    
             $jmyWeb->cargar_js(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"]);    
-            $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(["return"=>true])."js/jmy_administrador/administrador_modulos.js?f=".$version]);    
+            $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn()."app/jmyweb/v1/assets/js/jmy_administrador/administrador_modulos.js?f=".$version]);    
             $url_marco="../".BASE_APP."vista/jmy_administrador/administrador_modulos.php";
         break;
         case 'usuarios':      
             $jmyWeb->cargar_css(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"]);    
             $jmyWeb->cargar_js(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"]); 
-            $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(["return"=>true])."js/jmy_administrador/administrador_usuarios.js?f=".$version]);
+            $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn()."app/jmyweb/v1/assets/js/jmy_administrador/administrador_usuarios.js?f=".$version]);
             //$jmyWeb->cargar_js(["url"=>$jmyWeb->url_templet(['return'=>1])."js/perfil.js?d=".date('U')]);
             $url_marco="../".BASE_APP."vista/jmy_administrador/administrador_usuarios.php";
             $url_sub_marco='perfil_detalle.php';
@@ -92,7 +92,7 @@ if($jmyWeb->sesion()){
                     require_once($modulos[$peticion[0]]['controlador']);
             }else{ $url_marco = "../".BASE_APP."vista/jmy_administrador/administrador_dashboard.php";}
     endswitch;
-    $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(["return"=>true])."js/jmy_administrador/administrador.js?f=".$version]);    
+    $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn()."app/jmyweb/v1/assets/js/jmy_administrador/administrador.js?f=".$version]);    
     
     $jmyWeb->cargar_vista([
         "url"=>"../".BASE_APP."vista/jmy_administrador/administrador_marco.php",
