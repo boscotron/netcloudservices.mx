@@ -2,12 +2,8 @@
 
 $pet = explode("/",$_GET['peticion']);
 
-if($pet[0]=='__'&&$pet[1]=='auth'){
-	$url= $jmyWeb->url_actual(['return'=>true]);
-	$u=explode(RUTA_ACTUAL,$url);
-	$jmyWeb ->redireccionar($jmyWeb->url_inicio(['return'=>true])."oauth/".$u[1]);
-}
-
+//$_SESSION['lenguaje']=($_SESSION['lenguaje']!='')?"es":$_SESSION['lenguaje'];
+/*
 $out = $jmy->ver([	
 			"TABLA"=>"blog", 		
 			"COLUMNAS"=>["titulo","subtitulo","imagen_1","url","fecha","sub_titulo"],
@@ -15,11 +11,13 @@ $out = $jmy->ver([
 			//"FO"=>true
 			//"ID_F"=>'blog'
 		]);
-$t = $jmyWeb->cargar(["pagina"=>"inicio"]);
-//$jmyWeb ->pre(['p'=>$t,'t'=>'TITULO_ARAY']);
+		*/
+$l=(in_array($_SESSION['lenguaje'],['es','en']))?$_SESSION['lenguaje']:'es';
+$t = $jmyWeb->cargar(["pagina"=>"inicio_".$l]);
+//$jmyWeb ->pre(['p'=>$l,'t'=>'TITULO_ARAY']);
 
 
 $jmyWeb ->cargar_js(["url"=>$jmyWeb->url_templet(['return'=>true])."assets/js/inicio.js"]);
-$jmyWeb ->cargar_vista(["url"=>"inicio.php","data"=>["blog"=>$out['otFm']]]);
+$jmyWeb ->cargar_vista(["url"=>"inicio.php","data"=>["blog"=>$out['otFm'],"page"=>"inicio_".$l]]);
 
 ?>

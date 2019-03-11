@@ -1,0 +1,14 @@
+.administrdor_nav{
+    display:none;
+}
+
+#contenido_administrador {
+    height: auto; 
+}
+.drop-text{
+    line-height: normal;
+}
+
+.webSliderOP{
+    position: unset !important;
+}

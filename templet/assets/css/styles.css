@@ -97,10 +97,6 @@ div.wpcf7 .placeheld {
 	color: #888;
 }
 
-div.wpcf7 .wpcf7-recaptcha iframe {
-	margin-bottom: 0;
-}
-
 div.wpcf7 input[type="file"] {
 	cursor: pointer;
 }
@@ -109,7 +105,6 @@ div.wpcf7 input[type="file"]:disabled {
 	cursor: default;
 }
 
-
-input#jmy_web_href , input#nueva_pagina {
-    color: #000 !important;
+div.wpcf7 .wpcf7-submit:disabled {
+	cursor: not-allowed;
 }

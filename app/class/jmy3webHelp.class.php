@@ -15,13 +15,14 @@ class JMY3WEB extends JMY3MySQL{
   	$modoEdicion=($_SESSION['JMY3WEB'][DOY]||$per['modulos_permisos'][$tabla]>3)?ture:MODO_DESAROLLADOR;
 	 //$_SESSION['JMY3WEB']['add_js']=[];
 
-  	parent::db([$tabla]); // Verificamos que exista la tabla, de nos er así el sistema la crea
+  //	parent::db([$tabla]); // Verificamos que exista la tabla, de nos er así el sistema la crea
   }
   	public function modoEditor(){ global $modoEdicion; return $modoEdicion; }
 	public function url_actual($d=[]){ if($d['return']){ return substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI']; }else{echo substr(RUTA_ACTUAL, 0, -1).$_SERVER['REQUEST_URI'];} }
 	public function url_templet($d=[]){ if($d['return']){ return RUTA_ACTUAL.BASE_TEMPLET; }else{echo RUTA_ACTUAL.BASE_TEMPLET;} }
 	public function url_app($d=[]){ if($d['return']){ return RUTA_ACTUAL.BASE_APP; }else{echo RUTA_ACTUAL.BASE_TEMPLET;} }
 	public function url_inicio($d=[]){ if($d['return']){ return RUTA_ACTUAL; }else{echo RUTA_ACTUAL;}  }
+  	private function cdn(){ return "https://cdn-concomsis.firebaseapp.com/"; }
   
   	public function archivos($d=[]){ 
   		/* 
@@ -173,10 +174,13 @@ class JMY3WEB extends JMY3MySQL{
 		global $modoEdicion;
 		$data = $d["data"];
 		if($modoEdicion){			
-			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/ckeditor.js']);
-			$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/adapters/jquery.js']); 
+			//$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/ckeditor.js']);
+			//$this->cargar_js(['url'=>BASE_APP.'js/ckeditor/adapters/jquery.js']); 
+			$this->cargar_js(['url'=>$this->cdn().'app/jmyweb/v1/assets/js/ckeditor/ckeditor.js']);
+			$this->cargar_js(['url'=>$this->cdn().'js/ckeditor/adapters/jquery.js']); 
 			$this->cargar_js(['url'=>'https://code.jquery.com/ui/1.12.1/jquery-ui.js']);
-			$this->cargar_js(['url'=>BASE_APP.'js/jmy/jmyWeb.js']);
+			$this->cargar_js(['url'=>$this->cdn().'app/jmyweb/v1/assets/js/jmy/jmyWeb.js']);
+			//$this->cargar_js(['url'=>BASE_APP.'js/jmy/jmyWeb.js']);
 		}
 		if(file_exists(BASE_TEMPLET.TEMPLET_HEADER)){
 			if(file_exists(BASE_APP.'controlador/'.TEMPLET_HEADER))
