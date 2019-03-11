@@ -13,8 +13,8 @@ $jmyWeb->cargar_js(["url"=>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/j
 $jmyWeb->cargar_js(["url"=>"https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.bundle.min.js"]); 
 $url_entrada = 'https://comsis.mx/app/entrar/?re='.$jmyWeb->url_inicio(['return'=>true]).'administrador/entrar/&api=e2ad454bea7d919f0fc411a8b885580c&api_web='.JMY_API.'&sep=1';
      
-$jmyWeb->cargar_css(["url"=>$jmyWeb->url_app(['return'=>true])."js/jsoneditor/jsoneditor.min.css"]);    
-$jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(['return'=>true])."js/jsoneditor/jsoneditor.min.js"]);  
+$jmyWeb->cargar_css(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.css"]);    
+$jmyWeb->cargar_js(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.js"]);  
 if($jmyWeb->sesion()){  
     $data = [];
     switch($peticion[0]):
@@ -41,8 +41,8 @@ if($jmyWeb->sesion()){
             $url_marco="../".BASE_APP."vista/jmy_administrador/administrador_salida.php";
         break;
         case 'importar':      
-            $jmyWeb->cargar_css(["url"=>$jmyWeb->url_app(['return'=>true])."js/jsoneditor/jsoneditor.min.css"]);    
-             $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(['return'=>true])."js/jsoneditor/jsoneditor.min.js"]);    
+            $jmyWeb->cargar_css(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.css"]);    
+             $jmyWeb->cargar_js(["url"=>$jmyWeb->cdn(['return'=>true])."app/jmyweb/v1/assets/js/jsoneditor/jsoneditor.min.js"]);    
             $jmyWeb->cargar_css(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"]);    
              $jmyWeb->cargar_js(["url"=>"https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"]);    
              $jmyWeb->cargar_js(["url"=>$jmyWeb->url_app(["return"=>true])."js/jmy_administrador/administrador_importar.js?f=".$version]);    
