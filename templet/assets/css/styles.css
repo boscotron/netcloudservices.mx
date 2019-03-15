@@ -113,3 +113,7 @@ div.wpcf7 input[type="file"]:disabled {
 input#jmy_web_href , input#nueva_pagina {
     color: #000 !important;
 }
+
+.alto{
+	height: 900px;
+}

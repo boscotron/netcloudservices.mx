@@ -1,5 +1,10 @@
 ( function( $ ) {
-
+	if ( $("article")[0] ) {
+		
+	  }else{
+		$("footer").before("<div class='alto'>Este párrafo tiene que salir entre el párrafo 1 y 2</div>");
+		
+	  }
 	'use strict';
 
 	if ( typeof wpcf7 === 'undefined' || wpcf7 === null ) {
