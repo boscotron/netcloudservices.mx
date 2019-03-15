@@ -1,10 +1,17 @@
 <?php
- $page = "inicio";
- $tabla = "landing"; ?>
+ $page = 'inicio';
+ $tabla = "vistaweb"; ?>
 
 <article id="post-7" class="post-7 page type-page status-publish hentry">
-   <div class="entry-content">
-      <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider">
+   <div class="entry-content"><div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('foto',$this->url_templet(["return"=>1]).'assets/img/banner.jpg'); ?>') !important">
+<div class="jmy_web_slider"   data-page="inicio" data-tabla="vistaweb"   id="marco_principal"  data-marco="marco_principal" data-var='<?php echo json_encode([ [ 
+		"type"=>"imagen",
+		"id"=>"foto",
+		"backgound"=>"et_pb_section_0",
+		"width"=>"903",
+		"height"=>"423",
+	  ]]); ?>'></div>
+
          <div class="et_pb_top_inside_divider"></div>
          <div class=" et_pb_row et_pb_row_0">
             <div class="et_pb_column et_pb_column_4_4  et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
@@ -101,66 +108,127 @@
 		<div class=" et_pb_row et_pb_row_4">
 		
 		<?php
+
 			$def_cuadros = [
+
 				[
+
 					"titulo"=>"<strong>COMUNICACIONES UNIFICADAS</strong>",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><strong>TODO EN UNO</strong></span>',
+
 					"texto"=>'Unificamos las <strong>comunicaciones de voz, video y datos</strong> para reducir los gastos en tecnologías de información y mejorar la capacidad de respuesta.',
+
 				],[
+
 					"titulo"=>"<strong>SEGURIDAD CIBERNÉTICA</strong",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><b>PROTECCIÓN CONTRA HACKEOS</b></span>',
+
 					"texto"=>'Con nuestros distintos productos de seguridad como firewall, routers entre otros podrás definir junto con nosotros la arquitectura de <strong>seguridad necesaria para tu empresa</strong>.',
+
 				],[
+
 					"titulo"=>"<strong>VIGILANCIA AVANZADA</strong>",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><strong>ASEGURA TU TRANQUILIDAD</strong></span>',
+
 					"texto"=>'No es necesario que estés las 24 horas en tu oficina para poder supervisar las operaciones. Instala cámaras en lugares estratégicos para que<strong> monitores tu negocio a cualquier hora del día</strong>.',
+
 				],[
+
 					"titulo"=>"<strong>CABLEADO ESTRUCTURADO</strong>",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><strong>DISEAÑOS LA CONECTIVIDAD QUE NECESITAS</strong></span>',
+
 					"texto"=>'Brindamos<strong> soluciones de infraestructura inteligente</strong> que ayudan a monitorear, rastrear y optimizar tu red.',
+
 				],[
+
 					"titulo"=>"<strong>CONTACT CENTER </strong>",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><strong>EN LA NUBE</strong></span>',
+
 					"texto"=>'<strong>Optimizamos la operación de servicio al cliente</strong>, tele-mercadeo o cobranza con soluciones integrales de Call Center.',
+
 				],[
+
 					"titulo"=>"<strong>APLICACIONES </strong>",
+
 					"subtitulo"=>'<span style="color: #00aeef;"><strong>EN LA NUBE</strong></span>',
+
 					"texto"=>'Analizamos las necesidades de tu empresa para brindarte servicios de almacenamiento, plataforma e infrastructura en la nube.',
+
 				],
+
 			];
+
 			$sa = [3,6,9,12];
+
 			for ($i=0; $i < $cuadros; $i++) { 
+
 				echo (in_array($i,$sa)) ? '</div><div class=" et_pb_row et_pb_row_4">':'';
-				echo '<div class="et_pb_column et_pb_column_1_3  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough">
+
+             
+            echo '
+            
+            
+            <div class="et_pb_column et_pb_column_1_3  et_pb_column_8 et_pb_css_mix_blend_mode_passthrough" style="background-image:url('.$this->pnt('foto_'.$i,$this->url_templet(["return"=>1]).'/assets/img/comunicaciones.jpg',["return"=>1]).') !important">
+            
+            <div class="jmy_web_slider"  data-page="'. $page.'"   data-tabla="'. $tabla.'"  id="marco_'.$i.'"  data-marco="marco'.$i.'" data-var=\''.json_encode([ [ "type"=>"imagen",
+               "id"=>"foto_".$i,
+               "backgound"=>"et_pb_column_8",
+               "idadd"=>"tab_imagenes_",
+                "width"=>"385",
+                "height"=>"252"  ]
+                
+                ]).'\'></div>
 				<div class="et_pb_text et_pb_module et_pb_bg_layout_light et_pb_text_align_left trans et_pb_text_5">
+
 				   <div class="et_pb_text_inner">
-					  <h2 class="jmy_web_div" data-page="'.$page.'" id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
-					  <h4 class="jmy_web_div" data-page="'.$page.'" id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
-					   <p class="jmy_web_div" data-page="'.$page.'" id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
+
+					  <h2 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h2_'.$i.'" data-editor="no">'.$this->pnt('box_h2_'.$i,($def_cuadros[$i]["titulo"]!='')?$def_cuadros[$i]["titulo"]:"Texto",["return"=>1]).' </h2>
+
+					  <h4 class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_h4_'.$i.'" data-editor="no">'.$this->pnt('box_h4_'.$i,($def_cuadros[$i]["subtitulo"]!='')?$def_cuadros[$i]["subtitulo"]:"Texto",["return"=>1]).' </h4>
+
+					   <p class="jmy_web_div" data-page="'.$page.'"  data-tabla="'. $tabla.'"  id="box_p_'.$i.'" data-editor="no">'.$this->pnt('box_p_'.$i,($def_cuadros[$i]["texto"]!='')?$def_cuadros[$i]["texto"]:"Texto",["return"=>1]).' </p>
+
 				   </div>
+
 				</div>
+
 				<!-- .et_pb_text -->
+
 			 </div>
+
 			 <!-- .et_pb_column -->';
+
 			}
+
 		?>
+
          </div>
+
 		 <!-- .et_pb_row -->
+
 		 
+
+
+
 
 
 
       </div>
       <!-- .et_pb_section -->
-      <div id="contacto" class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('img_slider_2',$this->url_templet(["return"=>1]).'images/contacto2.jpg'); ?>') !important">
+      <div id="contacto img_slider_form" class="et_pb_section et_pb_section_4 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('img_slider_form',$this->url_templet(["return"=>1]).'assets/img/contacto2.jpg'); ?>') !important">
 
-<div class="jmy_web_slider"  data-page="<?php echo $page; ?>"   data-tabla="<?php echo $tabla; ?>"  id="marco_contacto"  data-marco="marco_contacto" data-var='<?php echo json_encode([ [ 
-		"type"=>"imagen",
-		"id"=>"img_slider_2",
-		"backgound"=>"et_pb_section_4",
-		"width"=>"1920",
-		"height"=>"1304",
-     ]]); ?>'></div>
+      <div class="jmy_web_slider"  data-page="inicio" data-tabla="vistaweb"  id="marco_form"  data-marco="marco_form" data-var='<?php echo json_encode([ [ 
+            "type"=>"imagen",
+            "id"=>"img_slider_form",
+            "backgound"=>"et_pb_section",
+            "width"=>"1920",
+            "height"=>"1304",
+         ]]); ?>'></div>
 
          <div class="et_pb_top_inside_divider"></div>
          <div class=" et_pb_row et_pb_row_6 et_pb_gutters2">
@@ -180,7 +248,7 @@
                   <div class="et_pb_text_inner">
                      <div role="form" class="wpcf7" id="wpcf7-f50-p7-o1" lang="es-ES" dir="ltr">
                         <div class="screen-reader-response"></div>
-                        <form action="./#wpcf7-f50-p7-o1" method="post" class="wpcf7-form" novalidate="novalidate">
+                        <form method="post" class="wpcf7-form" novalidate="novalidate">
                            <div style="display: none;">
                               <input type="hidden" name="_wpcf7" value="50">
                               <input type="hidden" name="_wpcf7_version" value="5.0.1">
@@ -188,11 +256,21 @@
                               <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f50-p7-o1">
                               <input type="hidden" name="_wpcf7_container_post" value="7">
                            </div>
-                           <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="NOMBRE"></span></p>
-                           <p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="EMAIL"></span></p>
-                           <p><span class="wpcf7-form-control-wrap your-tel"><input type="text" name="your-tel" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="TELÉFONO"></span></p>
-                           <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="MENSAJE"></textarea></span></p>
-                           <p><input type="submit" value="ENVIAR" class="wpcf7-form-control wpcf7-submit"><span class="ajax-loader"></span></p>
+                           <p><span class="wpcf7-form-control-wrap your-name">
+                              <input  data-formulario="contacto_<?php echo $page; ?>" data-campo="nombre" type="text" name="name" id="name" value=""  size="40" class=" jmy_web_contacto" aria-required="true" aria-invalid="false" placeholder="NOMBRE"></span>
+                           </p>
+
+                           <p><span class="wpcf7-form-control-wrap your-email">
+                              <input data-formulario="contacto_<?php echo $page; ?>" data-campo="email" type="email" name="email" id="email" value="" size="40" class="sjmy_web_contacto" aria-required="true" aria-invalid="false" placeholder="EMAIL"></span></p>
+
+                           <p><span class="wpcf7-form-control-wrap your-tel">
+                              <input data-formulario="contacto_<?php echo $page; ?>" data-campo="telefono" type="telefono" name="telefono" id="telefono" value="" size="40" class=" jmy_web_contacto"  aria-required="true" aria-invalid="false" placeholder="TELÉFONO"></span></p>
+                              
+                           <p><span class="wpcf7-form-control-wrap your-message">
+                              <textarea data-formulario="contacto_<?php echo $page; ?>" data-campo="mensaje" type="mensaje" name="mensaje" id="mensaje" value="" size="40" class=" jmy_web_contacto" aria-invalid="false" placeholder="MENSAJE"></textarea></span></p>
+
+                           <p><button type="button" value="enviar" id="contacto_<?php echo $page; ?>" data-formulario="contacto_<?php echo $page; ?>" class="jmy_web_contacto_enviar">
+                              <span class="ajax-loader"></span></p>
                            <div class="wpcf7-response-output wpcf7-display-none"></div>
                         </form>
                      </div>

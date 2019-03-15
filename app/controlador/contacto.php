@@ -12,6 +12,7 @@ $out = $print[ot]['inicio'];
 $out['pagina'] =  $url;
 
 $jmyWeb->cargar_js(['url'=>BASE_APP.'js/jmy/contacto.js']);
+/* $jmyWeb ->cargar_js(["url"=>$jmyWeb ->cdn(["return"=>true])."app/jmyweb/v1/assets/js/contacto.js"]); */
 $jmyWeb ->cargar_vista(["url"=>$vista.".php","data"=>$out]);
 
 ?> 
