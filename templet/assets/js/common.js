@@ -1,3 +1,15 @@
+jQuery(window).load(function(){
+	//Cuando se carga todo el contenido.
+	jQuery("#main").css("min-height", (jQuery(window).height()-jQuery("footer").outerHeight()-jQuery("header").outerHeight()+"px"));
+	}).resize(function(){
+	//Cuando se escala la pantalla.
+	jQuery("#main").css("min-height", (jQuery(window).height()-jQuery("footer").outerHeight()-jQuery("header").outerHeight()+"px"));
+	});
+	jQuery(document).ready(function(){
+	//Cuando el DOM está disponible.
+	jQuery("#main").css("min-height", (jQuery(window).height()-jQuery("footer").outerHeight()-jQuery("header").outerHeight()+"px"));
+	})
+
 (function($){
 	$(document).ready( function(){
 		var user_agent = navigator.userAgent;
