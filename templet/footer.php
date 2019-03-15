@@ -7,7 +7,7 @@
 				
 
 		
-	<div id="footer-bottom" class="col-md-3 mb-md-0 mb-3">
+	<div id="footer-bottom">
 				<div class="container clearfix col-md-3 mb-md-0 mb-3">
 					<ul class="et-social-icons">
 						<li class="et-social-icon et-social-facebook">
