@@ -1,57 +1,68 @@
+
+<div class="final">
+
 </div> <!-- #main-content -->
 
-
-			<footer id="main-footer">
+	<footer id="main-footer">
 				
 
 		
-				<div id="footer-bottom">
-					<div class="container clearfix">
-				<ul class="et-social-icons">
-	<li class="et-social-icon et-social-facebook">
-		<a href="./#" class="icon">
-			<span>Facebook</span>
-		</a>
-	</li>
-	<li class="et-social-icon et-social-twitter">
-		<a href="./#" class="icon">
-			<span>Twitter</span>
-		</a>
-	</li>
-	<li class="et-social-icon et-social-google-plus">
-		<a href="./#" class="icon">
-			<span>Google</span>
-		</a>
-	</li>
-	<li class="et-social-icon et-social-rss">
-		<a href="./feed/" class="icon">
-			<span>RSS</span>
-		</a>
-	</li>
-	<br>
-	<li  class="et-logo-icon et-logo">
-				<img  src="<?php $this->url_templet(); ?>/assets/img/logo.png" alt="NETCLOUD" id="logo" width="70%" data-height-percentage="89" data-actual-width="221" data-actual-height="104">
-	</li>
+	<div id="footer-bottom" class="col-md-3 mb-md-0 mb-3">
+				<div class="container clearfix col-md-3 mb-md-0 mb-3">
+					<ul class="et-social-icons">
+						<li class="et-social-icon et-social-facebook">
+							<a href="./#" class="icon">
+								<span>Facebook</span>
+							</a>
+						</li>
+						<li class="et-social-icon et-social-twitter">
+							<a href="./#" class="icon">
+								<span>Twitter</span>
+							</a>
+						</li>
+						<li class="et-social-icon et-social-google-plus">
+							<a href="./#" class="icon">
+								<span>Google</span>
+							</a>
+						</li>
+						<li class="et-social-icon et-social-rss">
+							<a href="./feed/" class="icon">
+								<span>RSS</span>
+							</a>
+						</li>
 
 
-</ul>
+					</ul>
 
-<ul>
-<div class="col-md-2 col-sm-4">
-                    <h3 class="jmy_web_div" data-page="footer" id="texto_conocenos" data-editor="no">
-                        <?php $this->pnt('texto_conocenos','Conocenos ',["secundario"=>"footer"]); ?>
-                            </h3>
-                    <ul>
-                        <li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#" class="jmy_web_div" data-page="footer" id="texto_nosotros" data-editor="no">
-                        <?php $this->pnt('texto_nosotros','Nosotros ',["secundario"=>"footer"]); ?></a></li>
-                        <li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#" class="jmy_web_div" data-page="footer" id="texto_Habitaciones" data-editor="no">
-                        <?php $this->pnt('texto_Habitaciones','Habitaciones ',["secundario"=>"footer"]); ?></a></li>
-                        <li><a href="<?php echo RUTA_ACTUAL; ?>contacto" class="jmy_web_div" data-page="footer" id="texto_Contacto" data-editor="no">
-                        <?php $this->pnt('texto_Contacto','Contacto ',["secundario"=>"footer"]); ?></a></li>
-                    </ul>
-                </div> 
-</ul>
-<div id="footer-info">Netcloud todos los derechos reservados</div>					</div>	<!-- .container -->
+					<ul>
+						<div >
+											<h3 class="jmy_web_div" data-page="footer" id="texto_conocenos" data-editor="no">
+												<?php $this->pnt('texto_conocenos','Conocenos ',["secundario"=>"footer"]); ?>
+													</h3>
+											<ul>
+												<li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#netcloud" class="jmy_web_div" data-page="footer" id="texto_nosotros" data-editor="no">
+												<?php $this->pnt('texto_netcloud','Netcloud ',["secundario"=>"footer"]); ?></a></li>
+												<li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#servicios" class="jmy_web_div" data-page="footer" id="texto_servicios" data-editor="no">
+												<?php $this->pnt('texto_servicios','Servicios ',["secundario"=>"footer"]); ?></a></li>
+												<li><a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>blog" class="jmy_web_div" data-page="footer" id="texto_blog" data-editor="no">
+												<?php $this->pnt('texto_blog','Blog ',["secundario"=>"footer"]); ?></a></li>
+												<li><a href="<?php echo RUTA_ACTUAL; ?>#contacto" class="jmy_web_div" data-page="footer" id="texto_Contacto" data-editor="no">
+												<?php $this->pnt('texto_Contacto','Contacto ',["secundario"=>"footer"]); ?></a></li>
+											</ul>
+										</div> 
+					</ul>
+			
+			<div id="footer-info" >
+				<p class="jmy_web_div" data-page="footer" id="texto_direccion" data-editor="no">
+										<?php $this->pnt('texto_direccion','© NETCLOUD S.A. de C.V. 2019<span>•</span>DIRECCIÓN<span>•</span> DIRECCIÓN<span>•</span> </i> TELÉFONO'); ?></p> <br>
+							 			<span>NETCLOUD © 2019 </span>
+										<a href="<?php echo RUTA_ACTUAL.BASE_TEMPLET; ?>#inicio" class="jmy_web_div" data-page="footer" id="texto_NETCLOUD.MX" data-editor="no">
+												<?php $this->pnt('texto_NETCLOUD.MX','NETCLOUD.MX',["secundario"=>"footer"]); ?></a>  
+									</div>
+									
+	</div>
+
+	<!-- .container -->
 				</div>
 			</footer> <!-- #main-footer -->
 		</div> <!-- #et-main-area -->

@@ -12,7 +12,8 @@
 
    <div class="entry-content">
 		
-      <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" style="background-image:url('<?php $this->pnt('foto',$this->url_templet(["return"=>1]).'assets/img/banner.jpg'); ?>') !important">
+      <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular section_has_divider et_pb_bottom_divider et_pb_top_divider" 
+      style="background-image:url('<?php $this->pnt('foto',$this->url_templet(["return"=>1]).'assets/img/banner.jpg'); ?>') !important">
 <div class="jmy_web_slider"  data-page="<?php echo $page; ?>"   data-tabla="<?php echo $tabla; ?>"  id="marco_principal"  data-marco="marco_principal" data-var='<?php echo json_encode([ [ 
 		"type"=>"imagen",
 		"id"=>"foto",
